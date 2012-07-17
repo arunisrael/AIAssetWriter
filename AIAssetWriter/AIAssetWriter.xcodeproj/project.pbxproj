@@ -57,6 +57,7 @@
 		712399E215B532AF00D325CB /* AIAssetWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIAssetWriter.h; sourceTree = SOURCE_ROOT; };
 		712399E315B532AF00D325CB /* AIAssetWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIAssetWriter.m; sourceTree = SOURCE_ROOT; };
 		712399E515B5344800D325CB /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		71A9B41D15B535B50071A1B6 /* AIAssetWriterDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIAssetWriterDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +121,7 @@
 			children = (
 				712399E215B532AF00D325CB /* AIAssetWriter.h */,
 				712399E315B532AF00D325CB /* AIAssetWriter.m */,
+				71A9B41D15B535B50071A1B6 /* AIAssetWriterDelegate.h */,
 				712399BC15B5326700D325CB /* AIAppDelegate.h */,
 				712399BD15B5326700D325CB /* AIAppDelegate.m */,
 				712399BF15B5326700D325CB /* AIViewController.h */,
@@ -440,6 +442,7 @@
 				712399DE15B5326700D325CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		712399DF15B5326700D325CB /* Build configuration list for PBXNativeTarget "AIAssetWriterTests" */ = {
 			isa = XCConfigurationList;
@@ -448,6 +451,7 @@
 				712399E115B5326700D325CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
