@@ -11,5 +11,6 @@ build/*
 *.xcworkspace
 !default.xcworkspace
 xcuserdata
+./AIAssetWriter/AIAssetWriter.xcodeproj/project.xcworkspace/xcuserdata/arunisrael.xcuserdatad/UserInterfaceState.xcuserstate
 profile
 *.moved-aside

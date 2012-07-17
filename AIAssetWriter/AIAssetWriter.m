@@ -17,7 +17,7 @@
 
 - (id) init
 {
-    [self initWithDestDir:NSTemporaryDirectory()];
+    return [self initWithDestDir:NSTemporaryDirectory()];
 }
 
 - (id) initWithDestDir:(NSString *) dir
@@ -42,6 +42,7 @@
 - (void) writeAssetToDestDirWithNamingBlock:(AssetFileNamingBlock)assetFileNamingBlock
 {
     ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init]; 
+    __block NSString *destFileName;
     [library assetForURL:[self assetURL] 
              resultBlock:^(ALAsset *asset)
             {
@@ -49,7 +50,7 @@
                 Byte *buffer = (Byte*)malloc(rep.size);
                 NSUInteger buffered = [rep getBytes:buffer fromOffset:0.0 length:rep.size error:nil];
                 NSData *data = [NSData dataWithBytesNoCopy:buffer length:buffered freeWhenDone:YES];
-                NSString *destFileName = assetFileNamingBlock([self assetURL]);
+                destFileName = assetFileNamingBlock([self assetURL]);
                 NSError *error;
                 NSString *destFileFullPath = [[self destDir] stringByAppendingPathComponent:destFileName];
                 [data writeToFile:destFileFullPath options:NSDataWritingAtomic error:&error];

@@ -1,0 +1,455 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		712399AE15B5326700D325CB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 712399AD15B5326700D325CB /* UIKit.framework */; };
+		712399B015B5326700D325CB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 712399AF15B5326700D325CB /* Foundation.framework */; };
+		712399B215B5326700D325CB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 712399B115B5326700D325CB /* CoreGraphics.framework */; };
+		712399B815B5326700D325CB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 712399B615B5326700D325CB /* InfoPlist.strings */; };
+		712399BA15B5326700D325CB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 712399B915B5326700D325CB /* main.m */; };
+		712399BE15B5326700D325CB /* AIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 712399BD15B5326700D325CB /* AIAppDelegate.m */; };
+		712399C115B5326700D325CB /* AIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 712399C015B5326700D325CB /* AIViewController.m */; };
+		712399C415B5326700D325CB /* AIViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 712399C215B5326700D325CB /* AIViewController.xib */; };
+		712399CC15B5326700D325CB /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 712399CB15B5326700D325CB /* SenTestingKit.framework */; };
+		712399CD15B5326700D325CB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 712399AD15B5326700D325CB /* UIKit.framework */; };
+		712399CE15B5326700D325CB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 712399AF15B5326700D325CB /* Foundation.framework */; };
+		712399D615B5326700D325CB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 712399D415B5326700D325CB /* InfoPlist.strings */; };
+		712399D915B5326700D325CB /* AIAssetWriterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 712399D815B5326700D325CB /* AIAssetWriterTests.m */; };
+		712399E415B532AF00D325CB /* AIAssetWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 712399E315B532AF00D325CB /* AIAssetWriter.m */; };
+		712399E615B5344800D325CB /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 712399E515B5344800D325CB /* AssetsLibrary.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		712399CF15B5326700D325CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 712399A015B5326700D325CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 712399A815B5326700D325CB;
+			remoteInfo = AIAssetWriter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		712399A915B5326700D325CB /* AIAssetWriter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIAssetWriter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		712399AD15B5326700D325CB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		712399AF15B5326700D325CB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		712399B115B5326700D325CB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		712399B515B5326700D325CB /* AIAssetWriter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AIAssetWriter-Info.plist"; sourceTree = "<group>"; };
+		712399B715B5326700D325CB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		712399B915B5326700D325CB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		712399BB15B5326700D325CB /* AIAssetWriter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AIAssetWriter-Prefix.pch"; sourceTree = "<group>"; };
+		712399BC15B5326700D325CB /* AIAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AIAppDelegate.h; sourceTree = "<group>"; };
+		712399BD15B5326700D325CB /* AIAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AIAppDelegate.m; sourceTree = "<group>"; };
+		712399BF15B5326700D325CB /* AIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AIViewController.h; sourceTree = "<group>"; };
+		712399C015B5326700D325CB /* AIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AIViewController.m; sourceTree = "<group>"; };
+		712399C315B5326700D325CB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/AIViewController.xib; sourceTree = "<group>"; };
+		712399CA15B5326700D325CB /* AIAssetWriterTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AIAssetWriterTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		712399CB15B5326700D325CB /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		712399D315B5326700D325CB /* AIAssetWriterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AIAssetWriterTests-Info.plist"; sourceTree = "<group>"; };
+		712399D515B5326700D325CB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		712399D715B5326700D325CB /* AIAssetWriterTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AIAssetWriterTests.h; sourceTree = "<group>"; };
+		712399D815B5326700D325CB /* AIAssetWriterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AIAssetWriterTests.m; sourceTree = "<group>"; };
+		712399E215B532AF00D325CB /* AIAssetWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIAssetWriter.h; sourceTree = SOURCE_ROOT; };
+		712399E315B532AF00D325CB /* AIAssetWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIAssetWriter.m; sourceTree = SOURCE_ROOT; };
+		712399E515B5344800D325CB /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		712399A615B5326700D325CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				712399E615B5344800D325CB /* AssetsLibrary.framework in Frameworks */,
+				712399AE15B5326700D325CB /* UIKit.framework in Frameworks */,
+				712399B015B5326700D325CB /* Foundation.framework in Frameworks */,
+				712399B215B5326700D325CB /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		712399C615B5326700D325CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				712399CC15B5326700D325CB /* SenTestingKit.framework in Frameworks */,
+				712399CD15B5326700D325CB /* UIKit.framework in Frameworks */,
+				712399CE15B5326700D325CB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7123999E15B5326700D325CB = {
+			isa = PBXGroup;
+			children = (
+				712399B315B5326700D325CB /* AIAssetWriter */,
+				712399D115B5326700D325CB /* AIAssetWriterTests */,
+				712399AC15B5326700D325CB /* Frameworks */,
+				712399AA15B5326700D325CB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		712399AA15B5326700D325CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				712399A915B5326700D325CB /* AIAssetWriter.app */,
+				712399CA15B5326700D325CB /* AIAssetWriterTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		712399AC15B5326700D325CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				712399E515B5344800D325CB /* AssetsLibrary.framework */,
+				712399AD15B5326700D325CB /* UIKit.framework */,
+				712399AF15B5326700D325CB /* Foundation.framework */,
+				712399B115B5326700D325CB /* CoreGraphics.framework */,
+				712399CB15B5326700D325CB /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		712399B315B5326700D325CB /* AIAssetWriter */ = {
+			isa = PBXGroup;
+			children = (
+				712399E215B532AF00D325CB /* AIAssetWriter.h */,
+				712399E315B532AF00D325CB /* AIAssetWriter.m */,
+				712399BC15B5326700D325CB /* AIAppDelegate.h */,
+				712399BD15B5326700D325CB /* AIAppDelegate.m */,
+				712399BF15B5326700D325CB /* AIViewController.h */,
+				712399C015B5326700D325CB /* AIViewController.m */,
+				712399C215B5326700D325CB /* AIViewController.xib */,
+				712399B415B5326700D325CB /* Supporting Files */,
+			);
+			path = AIAssetWriter;
+			sourceTree = "<group>";
+		};
+		712399B415B5326700D325CB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				712399B515B5326700D325CB /* AIAssetWriter-Info.plist */,
+				712399B615B5326700D325CB /* InfoPlist.strings */,
+				712399B915B5326700D325CB /* main.m */,
+				712399BB15B5326700D325CB /* AIAssetWriter-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		712399D115B5326700D325CB /* AIAssetWriterTests */ = {
+			isa = PBXGroup;
+			children = (
+				712399D715B5326700D325CB /* AIAssetWriterTests.h */,
+				712399D815B5326700D325CB /* AIAssetWriterTests.m */,
+				712399D215B5326700D325CB /* Supporting Files */,
+			);
+			path = AIAssetWriterTests;
+			sourceTree = "<group>";
+		};
+		712399D215B5326700D325CB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				712399D315B5326700D325CB /* AIAssetWriterTests-Info.plist */,
+				712399D415B5326700D325CB /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		712399A815B5326700D325CB /* AIAssetWriter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 712399DC15B5326700D325CB /* Build configuration list for PBXNativeTarget "AIAssetWriter" */;
+			buildPhases = (
+				712399A515B5326700D325CB /* Sources */,
+				712399A615B5326700D325CB /* Frameworks */,
+				712399A715B5326700D325CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AIAssetWriter;
+			productName = AIAssetWriter;
+			productReference = 712399A915B5326700D325CB /* AIAssetWriter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		712399C915B5326700D325CB /* AIAssetWriterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 712399DF15B5326700D325CB /* Build configuration list for PBXNativeTarget "AIAssetWriterTests" */;
+			buildPhases = (
+				712399C515B5326700D325CB /* Sources */,
+				712399C615B5326700D325CB /* Frameworks */,
+				712399C715B5326700D325CB /* Resources */,
+				712399C815B5326700D325CB /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				712399D015B5326700D325CB /* PBXTargetDependency */,
+			);
+			name = AIAssetWriterTests;
+			productName = AIAssetWriterTests;
+			productReference = 712399CA15B5326700D325CB /* AIAssetWriterTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		712399A015B5326700D325CB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = AI;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 712399A315B5326700D325CB /* Build configuration list for PBXProject "AIAssetWriter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7123999E15B5326700D325CB;
+			productRefGroup = 712399AA15B5326700D325CB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				712399A815B5326700D325CB /* AIAssetWriter */,
+				712399C915B5326700D325CB /* AIAssetWriterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		712399A715B5326700D325CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				712399B815B5326700D325CB /* InfoPlist.strings in Resources */,
+				712399C415B5326700D325CB /* AIViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		712399C715B5326700D325CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				712399D615B5326700D325CB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		712399C815B5326700D325CB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		712399A515B5326700D325CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				712399BA15B5326700D325CB /* main.m in Sources */,
+				712399BE15B5326700D325CB /* AIAppDelegate.m in Sources */,
+				712399C115B5326700D325CB /* AIViewController.m in Sources */,
+				712399E415B532AF00D325CB /* AIAssetWriter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		712399C515B5326700D325CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				712399D915B5326700D325CB /* AIAssetWriterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		712399D015B5326700D325CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 712399A815B5326700D325CB /* AIAssetWriter */;
+			targetProxy = 712399CF15B5326700D325CB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		712399B615B5326700D325CB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				712399B715B5326700D325CB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		712399C215B5326700D325CB /* AIViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				712399C315B5326700D325CB /* en */,
+			);
+			name = AIViewController.xib;
+			sourceTree = "<group>";
+		};
+		712399D415B5326700D325CB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				712399D515B5326700D325CB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		712399DA15B5326700D325CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		712399DB15B5326700D325CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		712399DD15B5326700D325CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AIAssetWriter/AIAssetWriter-Prefix.pch";
+				INFOPLIST_FILE = "AIAssetWriter/AIAssetWriter-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		712399DE15B5326700D325CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AIAssetWriter/AIAssetWriter-Prefix.pch";
+				INFOPLIST_FILE = "AIAssetWriter/AIAssetWriter-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		712399E015B5326700D325CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AIAssetWriter.app/AIAssetWriter";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AIAssetWriter/AIAssetWriter-Prefix.pch";
+				INFOPLIST_FILE = "AIAssetWriterTests/AIAssetWriterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		712399E115B5326700D325CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AIAssetWriter.app/AIAssetWriter";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AIAssetWriter/AIAssetWriter-Prefix.pch";
+				INFOPLIST_FILE = "AIAssetWriterTests/AIAssetWriterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		712399A315B5326700D325CB /* Build configuration list for PBXProject "AIAssetWriter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				712399DA15B5326700D325CB /* Debug */,
+				712399DB15B5326700D325CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		712399DC15B5326700D325CB /* Build configuration list for PBXNativeTarget "AIAssetWriter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				712399DD15B5326700D325CB /* Debug */,
+				712399DE15B5326700D325CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		712399DF15B5326700D325CB /* Build configuration list for PBXNativeTarget "AIAssetWriterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				712399E015B5326700D325CB /* Debug */,
+				712399E115B5326700D325CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 712399A015B5326700D325CB /* Project object */;
+}

@@ -7,6 +7,12 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol MLAssetWriterDelegate <NSObject>
+- (void) didWriteFile:(NSString *) fileName atPath:(NSString *) pathName;
+- (void) didFailToWriteFile:(NSString *) fileName atPath:(NSString *) pathName withError:(NSError *) error;
+@end
+
+
 @interface AIAssetWriter : NSObject
 {
     NSURL *assetURL;
@@ -17,17 +23,14 @@
 @property (nonatomic, strong) NSString *destDir;
 @property (nonatomic, weak) id <MLAssetWriterDelegate> delegate;
 
-typedef NSString (^AssetFileNamingBlock)(NSURL *);
+typedef NSString* (^AssetFileNamingBlock)(NSURL *);
 
 - (void) writeAssetToDestDirWithNamingBlock:(AssetFileNamingBlock)assetFileNamingBlock;
 - (id) initWithDestDir:(NSString *) dir;
 
 @end
 
-@protocol MLAssetWriterDelegate
-- (void) didWriteFile:(NSString *) fileName atPath:(NSString *) pathName;
-- (void) didFailToWriteFile:(NSString *) fileName atPath:(NSString *) pathName withError:(NSError *) error;
-@end
+
 
 // handle case where asset is movie
 // methods for asset representation types- pick smart default (defaultRepresentation)
