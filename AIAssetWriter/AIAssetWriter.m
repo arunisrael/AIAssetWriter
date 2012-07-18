@@ -9,59 +9,33 @@
 #import <AssetsLibrary/AssetsLibrary.h>
 
 @implementation AIAssetWriter
-@synthesize assetURL = _assetURL;
-@synthesize destDir = _destDir;
-@synthesize delegate = _delegate;
 
-#pragma mark - Initializers
-
-- (id) init
-{
-    return [self initWithDestDir:NSTemporaryDirectory()];
-}
-
-- (id) initWithDestDir:(NSString *) dir
-{
-    self = [super init];
-    if (self) {
-        [self setDestDir:NSTemporaryDirectory()];
-    }
-    return self;    
-}
-
-#pragma mark - Asset File Naming
-//- (NSString *) buildAssetFileName:(ALAsset *) asset
-//{
-//    NSDate *assetDate = [asset valueForProperty:ALAssetPropertyDate];
-//    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-//    [dateFormat setDateFormat:@"yyyy-MM-dd HH.mm.ss"];
-//    return [NSString stringWithFormat:@"%@.jpg",[dateFormat stringFromDate:assetDate]];
-//}
-
-#pragma mark - Writing to Dest Dir
-- (void) writeAssetToDestDirWithNamingBlock:(AssetFileNamingBlock)assetFileNamingBlock
++ (void) writeAsset:(ALAsset *) asset atURL:(NSURL *) assetURL toFile:(NSString *) file atPath:(NSString *) path withDelegate:(id <AIAssetWriterDelegate>) delegate
 {
     ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init]; 
-    __block NSString *destFileName;
-    [library assetForURL:[self assetURL] 
+    [library assetForURL:assetURL
              resultBlock:^(ALAsset *asset)
             {
                 ALAssetRepresentation *rep = [asset defaultRepresentation];
+
                 Byte *buffer = (Byte*)malloc(rep.size);
                 NSUInteger buffered = [rep getBytes:buffer fromOffset:0.0 length:rep.size error:nil];
                 NSData *data = [NSData dataWithBytesNoCopy:buffer length:buffered freeWhenDone:YES];
-                destFileName = assetFileNamingBlock([self assetURL]);
+
                 NSError *error;
-                NSString *destFileFullPath = [[self destDir] stringByAppendingPathComponent:destFileName];
+
+                NSString *destFileFullPath = [path stringByAppendingPathComponent:file];
+
                 [data writeToFile:destFileFullPath options:NSDataWritingAtomic error:&error];
-                if ([[self delegate] respondsToSelector:@selector(didWriteFile:atPath:)]) {
-                    [[self delegate] didWriteFile:destFileName atPath:[self destDir]];
+                                
+                if ([delegate respondsToSelector:@selector(didWriteFile:atPath:forAsset:atURL:)]) {
+                    [delegate didWriteFile:file atPath:path forAsset:asset atURL:assetURL];
                 }
              } 
             failureBlock:^(NSError *error)
             {
-                if ([[self delegate] respondsToSelector:@selector(didFailToWriteFile:atPath:withError:)]) {
-                    [[self delegate] didFailToWriteFile:destFileName atPath:[self destDir] withError:error];
+                if ([delegate respondsToSelector:@selector(didFailToWriteFile:atPath:forAsset:atURL:)]) {
+                    [delegate didFailToWriteFile:file atPath:path forAsset:asset atURL:assetURL];
                 }
             }
      ];

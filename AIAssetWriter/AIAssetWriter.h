@@ -8,20 +8,11 @@
 #import <Foundation/Foundation.h>
 #import "AIAssetWriterDelegate.h"
 
+@class ALAsset;
+
 @interface AIAssetWriter : NSObject
-{
-    NSURL *assetURL;
-    NSString *destDir;
-    __weak id <AIAssetWriterDelegate> delegate;
-}
-@property (nonatomic, strong) NSURL *assetURL;
-@property (nonatomic, strong) NSString *destDir;
-@property (nonatomic, weak) id <AIAssetWriterDelegate> delegate;
 
-typedef NSString* (^AssetFileNamingBlock)(NSURL *);
-
-- (void) writeAssetToDestDirWithNamingBlock:(AssetFileNamingBlock)assetFileNamingBlock;
-- (id) initWithDestDir:(NSString *) dir;
++ (void) writeAsset:(ALAsset *) asset atURL:(NSURL *) assetURL toFile:(NSString *) file atPath:(NSString *) path withDelegate:(id <AIAssetWriterDelegate>) delegate;
 
 @end
 
@@ -33,4 +24,3 @@ typedef NSString* (^AssetFileNamingBlock)(NSURL *);
     //– aspectRatioThumbnail
 // test + example project
 // add README with examples
-// default asset file naming block (new public method- writeAssetToDestDir)

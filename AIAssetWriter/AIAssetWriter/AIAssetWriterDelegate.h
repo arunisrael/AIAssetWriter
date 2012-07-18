@@ -7,8 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+@class ALAsset;
 
 @protocol AIAssetWriterDelegate <NSObject>
-- (void) didWriteFile:(NSString *) fileName atPath:(NSString *) pathName;
-- (void) didFailToWriteFile:(NSString *) fileName atPath:(NSString *) pathName withError:(NSError *) error;
+
+- (void) didWriteFile:(NSString *) file atPath:(NSString *) path forAsset:(ALAsset *) asset atURL:(NSURL *) assetURL;
+
+- (void) didFailToWriteFile:(NSString *) file atPath:(NSString *) path forAsset:(ALAsset *) asset atURL:(NSURL *) assetURL;
+
 @end
